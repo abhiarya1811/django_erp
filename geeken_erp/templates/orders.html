@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Customer Name</th>
+                <th>Customer Address</th>
+                <th>Customer Mobile Number</th>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Order Received On</th>
+                <th>Order Delivery Date</th>
+                <th>Payment Method</th>
+                <th>Payment Status</th>
+                <th>Total Payment</th>
+                <th>Advance Payment</th>
+                <th>Remaining Payment</th>
+                <th>Return Policy</th>
+                <th>Return Policy Time Period</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in orders_data %}
+            <tr>
+                <td>{{ order.order_id }}</td>
+                <td>{{ order.customer_name }}</td>
+                <td>{{ order.customer_address }}</td>
+                <td>{{ order.customer_mob_num }}</td>
+                <td>{{ order.product_id }}</td>
+                <td>{{ order.product_name }}</td>
+                <td>{{ order.order_received_on }}</td>
+                <td>{{ order.order_delivery_date }}</td>
+                <td>{{ order.payment_method }}</td>
+                <td>{{ order.payment_status }}</td>
+                <td>{{ order.total_payment }}</td>
+                <td>{{ order.advance_payment }}</td>
+                <td>{{ order.remaining_payment }}</td>
+                <td>{{ order.retun_policy }}</td>
+                <td>{{ order.retun_policy_time_period }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

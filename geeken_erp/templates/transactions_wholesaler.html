@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wholesaler Transactions</title>
+</head>
+<body>
+    <h1>Wholesaler Transactions</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Transaction ID</th>
+                <th>Date of Transaction</th>
+                <th>Time of Transaction</th>
+                <th>Amount Paid by Wholesaler</th>
+                <th>Stock Details Sold</th>
+                <th>Transaction Status</th>
+                <th>Stock Details Bought</th>
+                <th>Transaction Status (Bought)</th>
+                <th>Transaction Time (Bought)</th>
+                <th>Transaction Date (Bought)</th>
+                <th>Purchased From (Franchise)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in transactions_wholesaler_data %}
+            <tr>
+                <td>{{ transaction.transaction_id }}</td>
+                <td>{{ transaction.date_of_transaction }}</td>
+                <td>{{ transaction.time_of_transaction }}</td>
+                <td>{{ transaction.amount_paid_wholesaler }}</td>
+                <td>{{ transaction.stock_details_sold }}</td>
+                <td>{{ transaction.transaction_status }}</td>
+                <td>{{ transaction.stock_details_bought }}</td>
+                <td>{{ transaction.transaction_status_bought }}</td>
+                <td>{{ transaction.tansaction_time_bought }}</td>
+                <td>{{ transaction.transaction_date_bought }}</td>
+                <td>{{ transaction.purchased_from_franchise }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Registration</title>
+</head>
+<body>
+    <h1>Admin Registration</h1>
+    <form action="{% url 'admin_register' %}" method="post">
+        {% csrf_token %}
+        <label for="admin_id">Admin ID:</label><br>
+        <input type="text" id="admin_id" name="admin_id"><br>
+        
+        <label for="admin_password">Password:</label><br>
+        <input type="password" id="admin_password" name="admin_password"><br>
+        
+        <label for="admin_name">Name:</label><br>
+        <input type="text" id="admin_name" name="admin_name"><br>
+        
+        <label for="admin_number">Number:</label><br>
+        <input type="text" id="admin_number" name="admin_number"><br>
+        
+        <label for="admin_email_id">Email:</label><br>
+        <input type="email" id="admin_email_id" name="admin_email_id"><br>
+        
+        <label for="admin_type">Type:</label><br>
+        <input type="text" id="admin_type" name="admin_type"><br>
+        
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>

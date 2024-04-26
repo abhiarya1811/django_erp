@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <!-- Add any necessary CSS or stylesheets here -->
+</head>
+<body>
+    <h1>User Registration</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <!-- Display form errors if any -->
+        {% if messages %}
+            <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+        <!-- Input fields for user registration -->
+        <label for="full_name"> Full Name:</label><br>
+        <input type="text" id="full_name" name="user_full_name" required><br><br>
+
+        <label for="email_id">Email ID:</label><br>
+        <input type="email" id="email_id" name="email_id" required><br><br>
+
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="confirm_password">Confirm Password:</label><br>
+        <input type="password" id="confirm_password" name="confirm_password" required><br><br>
+
+        <label for="phone_number">Phone Number:</label><br>
+        <input type="text" id="phone_number" name="phone_number" required><br><br>
+
+        <label for="address">Address:</label><br>
+        <input type="text" id="address" name="address" required><br><br>
+
+        <label for="registration_date">Registration Date:</label><br>
+        <input type="date" id="registration_date" name="registration_date" required><br><br>
+
+        
+        
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>

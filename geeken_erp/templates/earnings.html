@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earnings</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Sl. No</th>
+                <th>Month</th>
+                <th>From Stocks</th>
+                <th>Miscellaneous</th>
+                <th>Total Earnings</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for earning in earnings_data %}
+            <tr>
+                <td>{{ earning.sl_no }}</td>
+                <td>{{ earning.month }}</td>
+                <td>{{ earning.from_stocks }}</td>
+                <td>{{ earning.miscellaneous }}</td>
+                <td>{{ earning.total_earning }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

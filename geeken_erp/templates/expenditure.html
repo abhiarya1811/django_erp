@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenditure</title>
+</head>
+<body>
+    <h1>Expenditure</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Expenditure ID</th>
+                <th>Month</th>
+                <th>Staff Salaries Given</th>
+                <th>Spent on Stock</th>
+                <th>Spent on Transportation</th>
+                <th>Spent on Labour</th>
+                <th>Total Expenditure by Month</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for expenditure in expenditure_data %}
+            <tr>
+                <td>{{ expenditure.exp_id }}</td>
+                <td>{{ expenditure.month }}</td>
+                <td>{{ expenditure.staff_salaries_given }}</td>
+                <td>{{ expenditure.spent_on_stock }}</td>
+                <td>{{ expenditure.spent_on_transportation }}</td>
+                <td>{{ expenditure.spent_on_labour }}</td>
+                <td>{{ expenditure.total_exp_by_month }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Exchange ID</th>
+                <th>Date of Exchange</th>
+                <th>Time of Exchange</th>
+                <th>Product Exchanged</th>
+                <th>Product Required</th>
+                <th>Exchange Status</th>
+                <th>Additional Amount Paid</th>
+                <th>Exchange Completion Time</th>
+                <th>Exchange Completion Date</th>
+                <th>Exchange Initiation Date</th>
+                <th>Exchange Initiation Time</th>
+                <th>Customer Details</th>
+                <th>Exchange Product ID</th>
+                <th>Requested Product ID</th>
+                <th>Exchange Product Price</th>
+                <th>Requested Product Price</th>
+                <th>Reason of Exchange</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for exchange in exchange_data %}
+            <tr>
+                <td>{{ exchange.exchange_id }}</td>
+                <td>{{ exchange.date_of_exchange }}</td>
+                <td>{{ exchange.time_of_exchange }}</td>
+                <td>{{ exchange.product_exchanged }}</td>
+                <td>{{ exchange.product_required }}</td>
+                <td>{{ exchange.exchange_status }}</td>
+                <td>{{ exchange.additional_amount_paid }}</td>
+                <td>{{ exchange.exchange_completion_time }}</td>
+                <td>{{ exchange.exchange_completion_date }}</td>
+                <td>{{ exchange.exchange_initiation_date }}</td>
+                <td>{{ exchange.exchange_initiation_time }}</td>
+                <td>{{ exchange.customer_details }}</td>
+                <td>{{ exchange.exchange_product_id }}</td>
+                <td>{{ exchange.requested_product_id }}</td>
+                <td>{{ exchange.exchange_product_price }}</td>
+                <td>{{ exchange.requested_product_price }}</td>
+                <td>{{ exchange.reason_of_exchange }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

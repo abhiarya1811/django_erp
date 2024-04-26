@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Returns</title>
+</head>
+<body>
+    <h1>Customer Returns</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Return ID</th>
+                <th>Date of Return</th>
+                <th>Time of Return</th>
+                <th>Product Returned</th>
+                <th>Product ID</th>
+                <th>Return Status</th>
+                <th>Additional Amount Paid</th>
+                <th>Return Completion Date</th>
+                <th>Return Completion Time</th>
+                <th>Customer Details</th>
+                <th>Return Initiation Date</th>
+                <th>Return Initiation Time</th>
+                <th>Reason of Return</th>
+                <th>Return Product Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for return_entry in returns_data %}
+                <tr>
+                    <td>{{ return_entry.return_id }}</td>
+                    <td>{{ return_entry.date_of_return }}</td>
+                    <td>{{ return_entry.time_of_return }}</td>
+                    <td>{{ return_entry.product_return }}</td>
+                    <td>{{ return_entry.product_id }}</td>
+                    <td>{{ return_entry.return_status }}</td>
+                    <td>{{ return_entry.additional_amount_paid }}</td>
+                    <td>{{ return_entry.return_completion_date }}</td>
+                    <td>{{ return_entry.return_completion_time }}</td>
+                    <td>{{ return_entry.customer_details }}</td>
+                    <td>{{ return_entry.return_initiation_date }}</td>
+                    <td>{{ return_entry.return_initiation_time }}</td>
+                    <td>{{ return_entry.reason_of_return }}</td>
+                    <td>{{ return_entry.return_product_price }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

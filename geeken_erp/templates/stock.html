@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock</title>
+</head>
+<body>
+    <h1>Stock</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Stock ID</th>
+                <th>Product ID</th>
+                <th>Stock Arrival</th>
+                <th>Stock Status</th>
+                <th>Product Company</th>
+                <th>Stock Quantity Bought</th>
+                <th>Stock Quantity Available</th>
+                <th>Total Stock Quantity</th>
+                <th>Cost Per Item</th>
+                <th>Available Stock Cost</th>
+                <th>Bought Stock Cost</th>
+                <th>Stock Cost</th>
+                <th>Stock GST</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for stock in stock_data %}
+            <tr>
+                <td>{{ stock.stock_id }}</td>
+                <td>{{ stock.product_id }}</td>
+                <td>{{ stock.stock_arrival }}</td>
+                <td>{{ stock.stock_status }}</td>
+                <td>{{ stock.product_company }}</td>
+                <td>{{ stock.stock_quantity_bought }}</td>
+                <td>{{ stock.stock_quantity_available }}</td>
+                <td>{{ stock.total_stock_quantity }}</td>
+                <td>{{ stock.cost_per_item }}</td>
+                <td>{{ stock.available_stock_cost }}</td>
+                <td>{{ stock.bought_stock_cost }}</td>
+                <td>{{ stock.stock_cost }}</td>
+                <td>{{ stock.stock_gst }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

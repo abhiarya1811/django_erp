@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+<body>
+    <h1>Products</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Product Type</th>
+                <th>Product Subtype</th>
+                <th>Product Category</th>
+                <th>Measurements</th>
+                <th>Quality</th>
+                <th>Product Company</th>
+                <th>GST Per Item</th>
+                <th>Cost Price Per Item</th>
+                <th>Selling Price Per Item</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in product_data %}
+            <tr>
+                <td>{{ product.product_id }}</td>
+                <td>{{ product.product_name }}</td>
+                <td>{{ product.product_type }}</td>
+                <td>{{ product.product_subtype }}</td>
+                <td>{{ product.product_category }}</td>
+                <td>{{ product.measurements }}</td>
+                <td>{{ product.quality }}</td>
+                <td>{{ product.product_company }}</td>
+                <td>{{ product.gst_per_item }}</td>
+                <td>{{ product.cp_per_item }}</td>
+                <td>{{ product.sp_per_item }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suppliers</title>
+</head>
+<body>
+    <h1>Suppliers</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Supplier ID</th>
+                <th>Supplier Name</th>
+                <th>Supplier Address</th>
+                <th>Contact Number</th>
+                <th>Company Name</th>
+                <th>Product Supplies</th>
+                <th>Product Supplied Till Date</th>
+                <th>Dealing Since</th>
+                <th>Deals Completed</th>
+                <th>Deals Ongoing</th>
+                <th>Deals Completion Time Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for supplier in suppliers_data %}
+            <tr>
+                <td>{{ supplier.supplier_id }}</td>
+                <td>{{ supplier.supplier_name }}</td>
+                <td>{{ supplier.supplier_address }}</td>
+                <td>{{ supplier.contact_number }}</td>
+                <td>{{ supplier.company_name }}</td>
+                <td>{{ supplier.product_supplies }}</td>
+                <td>{{ supplier.product_supplied_till_date }}</td>
+                <td>{{ supplier.dealing_since }}</td>
+                <td>{{ supplier.deals_completed }}</td>
+                <td>{{ supplier.deals_ongoing }}</td>
+                <td>{{ supplier.deals_completion_time_date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
